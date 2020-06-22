@@ -441,6 +441,17 @@ export default {
     clearAll: 'Clear All',
     formatting: 'Formatting'
   },
+  compare: {
+    modeLabel: 'Comparison Mode',
+    typeLabel: 'Comparison Type',
+    types: {
+      absolute: 'Absolute',
+      percentage: 'Percentage'
+    }
+  },
+  mapPopover: {
+    primary: 'Primary'
+  },
   density: 'density',
   'Bug Report': 'Bug Report',
   'User Guide': 'User Guide',
