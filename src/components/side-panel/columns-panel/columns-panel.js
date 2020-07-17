@@ -27,11 +27,15 @@ import {Input} from 'components/common/styled-components';
 import {addDataToMap} from 'kepler.gl/actions';
 import {ArrowUp, ArrowDown} from 'components/common/icons';
 import ColumnActionsFactory from './column-actions';
+import {FormattedMessage} from 'react-intl';
 // import {ALL_FIELD_TYPES} from 'constants/default-settings';
 
 const StyledColumnsPanel = styled.div`
   margin-bottom: 12px;
   border-radius: 1px;
+  & > span {
+    color: ${props => props.theme.textColor};
+  }
 `;
 
 const StyledDatasetHeader = styled.div`
@@ -83,7 +87,7 @@ const StyledButtonsContainter = styled.div`
 ColumnsPanelFactory.deps = [DatasetTagFactory, ColumnActionsFactory];
 
 function ColumnsPanelFactory(DatasetTag) {
-  return class ColumnsPanel extends Component {
+  class ColumnsPanel extends Component {
     static propTypes = {
       datasets: PropTypes.object,
       columnsConfig: PropTypes.object,
@@ -190,13 +194,17 @@ function ColumnsPanelFactory(DatasetTag) {
 
     render() {
       const {datasets} = this.props;
+      const dataIds = Object.keys(datasets);
       return (
         <StyledColumnsPanel className="columns-panel">
-          {Object.keys(datasets).map(dataId => this._renderDatasetPanel(dataId, datasets))}
+          {!dataIds.length && <span><FormattedMessage id={'columnsPanel.addDatasets'} /></span>}
+          {dataIds.length > 0 && dataIds.map(dataId => this._renderDatasetPanel(dataId, datasets))}
         </StyledColumnsPanel>
       );
     }
   };
+
+  return ColumnsPanel;
 }
 
 export default ColumnsPanelFactory;

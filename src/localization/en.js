@@ -456,7 +456,8 @@ export default {
   columnsPanel: {
     actions: 'Actions',
     clear: 'Clear',
-    copy: 'Copy'
+    copy: 'Copy',
+    addDatasets: 'Add dataset(s)'
   },
   density: 'density',
   'Bug Report': 'Bug Report',
