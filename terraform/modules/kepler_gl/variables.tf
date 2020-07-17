@@ -58,3 +58,7 @@ variable "task_count" {
 variable "load_balancer_sg" {
   description = "Load balancer sg id"
 }
+
+variable "CI_COMMIT_ID" {
+  description = "CommitId"
+}

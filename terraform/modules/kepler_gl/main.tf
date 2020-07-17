@@ -183,6 +183,7 @@ resource "aws_ecs_task_definition" "kepler-gl_td" {
     kepler-gl_port   = var.kepler-gl_port
     kepler-gl_memory = var.kepler-gl_memory
     kepler-gl_cpu    = var.kepler-gl_cpu
+    kepler-gl_commit = var.CI_COMMIT_ID
   })
   network_mode             = "awsvpc"
   cpu                      = var.kepler-gl_cpu
@@ -211,7 +212,6 @@ resource "aws_ecs_service" "kepler-gl_service" {
   enable_ecs_managed_tags            = true
   propagate_tags                     = "SERVICE"
   deployment_minimum_healthy_percent = 50
-  force_new_deployment               = true
 
   load_balancer {
     target_group_arn = module.kepler-gl-lb.target_group_arns[0]
