@@ -23,3 +23,9 @@ package-lock.json
 /index.html
 
 npm-debug.log
+
+# Terraform
+.terraform
+
+# Codeship
+codeship.aes
