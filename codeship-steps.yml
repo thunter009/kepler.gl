@@ -3,7 +3,7 @@
   type: push
   tag: "master"
   image_name: 084888172679.dkr.ecr.us-east-1.amazonaws.com/kepler-gl
-  image_tag: "{{ .Branch }}-$CI_COMMIT_ID"
+  image_tag: "{{ .Branch }}-{{ .CommitID }}"
   registry: https://084888172679.dkr.ecr.us-east-1.amazonaws.com
   dockercfg_service: aws_dockercfg_prod
 
