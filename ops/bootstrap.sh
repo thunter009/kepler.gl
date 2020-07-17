@@ -19,7 +19,7 @@ eval $(python3 print_parameters.py --env="${ENV}" --app="${APP_NAME}")
 
 case "$1" in
 webserver)
-  yarn start
+  npm start
   exit
   ;;
 *)
