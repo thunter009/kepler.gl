@@ -24,7 +24,7 @@ import styled from 'styled-components';
 import DatasetTagFactory from '../common/dataset-tag';
 import FieldToken from 'components/common/field-token';
 import {Input} from 'components/common/styled-components';
-import {addDataToMap} from 'kepler.gl/actions';
+import {addDataToMap} from 'actions/actions';
 import {ArrowUp, ArrowDown} from 'components/common/icons';
 import ColumnActionsFactory from './column-actions';
 import {FormattedMessage} from 'react-intl';
