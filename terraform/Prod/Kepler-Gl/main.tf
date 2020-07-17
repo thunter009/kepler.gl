@@ -24,4 +24,5 @@ module "kepler-gl" {
   load_balancer_sg = var.load_balancer_sg
   task_count = var.task_count
   app_public_subnet_name = var.app_public_subnet_name
+  CI_COMMIT_ID = var.CI_COMMIT_ID
 }
