@@ -17,6 +17,6 @@ terraform:
   build:
     dockerfile: ./ops/Dockerfile
   volumes:
-    - ./:/terraform
+    - terraform/:/terraform
   encrypted_env_file:
     - aws.env.encrypted
