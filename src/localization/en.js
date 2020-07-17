@@ -78,6 +78,7 @@ export default {
     panels: {
       layer: 'Layers',
       filter: 'Filters',
+      columns: 'Columns',
       interaction: 'Interactions',
       basemap: 'Base map'
     }
@@ -451,6 +452,12 @@ export default {
   },
   mapPopover: {
     primary: 'Primary'
+  },
+  columnsPanel: {
+    actions: 'Actions',
+    clear: 'Clear',
+    copy: 'Copy',
+    addDatasets: 'Add dataset(s)'
   },
   density: 'density',
   'Bug Report': 'Bug Report',

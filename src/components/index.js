@@ -60,6 +60,9 @@ export {default as DatasetTagFactory} from './side-panel/common/dataset-tag';
 export {default as FilterManagerFactory} from './side-panel/filter-manager';
 export {default as FilterPanelFactory} from './side-panel/filter-panel/filter-panel';
 
+export {default as ColumnsManagerFactory} from './side-panel/columns-manager';
+export {default as ColumnsPanelFactory} from './side-panel/columns-panel/columns-panel';
+
 export {default as InteractionManagerFactory} from './side-panel/interaction-manager';
 export {default as BrushConfigFactory} from './side-panel/interaction-panel/brush-config';
 export {default as TooltipConfigFactory} from './side-panel/interaction-panel/tooltip-config';
@@ -91,13 +94,15 @@ export {default as ExportHtmlMapFactory} from './modals/export-map-modal/export-
 
 // // common factory
 export {default as AnimationControlFactory} from './common/animation-control/animation-control';
+export {default as AnimationControllerFactory} from './common/animation-control/animation-controller';
 export {default as SpeedControlFactory} from './common/animation-control/speed-control';
 export {default as AnimationPlaybacksFactory} from './common/animation-control/playback-controls';
 export {default as FloatingTimeDisplayFactory} from './common/animation-control/floating-time-display';
-export {default as DatasetSquare} from './common/styled-components';
 export {default as AnimationSpeedSliderFactory} from './common/animation-control/animation-speed-slider';
 export {default as RangePlotFactory} from './common/range-plot';
+export {default as RangeBrushFactory} from './common/range-brush';
 export {FieldListItemFactory} from './common/field-selector';
+export {default as TimeSliderMarkerFactory} from './common/time-slider-marker';
 
 // // Filters factory
 export {default as TimeWidgetFactory} from './filters/time-widget';
@@ -129,6 +134,9 @@ export {default as Portaled} from './common/portaled';
 export {default as DropdownList} from './common/item-selector/dropdown-list';
 export {default as ProgressBar} from './common/progress-bar';
 export {default as FileUploadProgress} from './common/file-uploader/file-upload-progress';
+export {default as Slider} from './common/slider/slider';
+export {default as DatasetSquare} from './common/styled-components';
+
 export * from './common/styled-components';
 import * as Icons from './common/icons';
 export {Icons};

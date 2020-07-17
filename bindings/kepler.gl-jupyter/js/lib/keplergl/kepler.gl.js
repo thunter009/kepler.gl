@@ -169,12 +169,7 @@ class KeplerGlJupyter {
   }
 }
 
-export function addDataConfigToKeplerGl({
-  data: inputData,
-  config,
-  options,
-  store
-}) {
+export function addDataConfigToKeplerGl({data: inputData, config, options, store}) {
   const data = inputData ? dataToDatasets(inputData) : [];
   log(data);
 

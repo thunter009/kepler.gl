@@ -39,7 +39,8 @@ import {
   ArrowDown,
   ArrowUp,
   Clipboard,
-  Cancel
+  Cancel,
+  Columns
 } from 'components/common/icons';
 import {getHTMLMapModeTileUrl} from 'utils/utils';
 import {TOOLTIP_FORMAT_TYPES} from './tooltip';
@@ -164,6 +165,11 @@ export const SIDEBAR_PANELS = [
     id: 'layer',
     label: 'sidebar.panels.layer',
     iconComponent: Layers
+  },
+  {
+    id: 'columns',
+    label: 'sidebar.panels.columns',
+    iconComponent: Columns
   },
   {
     id: 'filter',
@@ -793,8 +799,14 @@ export const DEFAULT_NOTIFICATION_TOPICS = keyMirror({
 
 // Animation
 export const BASE_SPEED = 600;
+export const FPS = 60;
+export const ANIMATION_TYPE = keyMirror({
+  interval: null,
+  continuous: null
+});
 export const DEFAULT_TIME_FORMAT = 'MM/DD/YY HH:mm:ssa';
 export const SPEED_CONTROL_RANGE = [0, 10];
+export const SPEED_CONTROL_STEP = 0.001;
 
 // We could use directly react-map-gl-draw EditorMode but this would
 // create a direct dependency with react-map-gl-draw
