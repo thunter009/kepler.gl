@@ -16,5 +16,7 @@ aws_dockercfg_prod:
 terraform:
   build:
     dockerfile: ./ops/Dockerfile
+  volumes:
+    - ./:/terraform
   encrypted_env_file:
     - aws.env.encrypted
