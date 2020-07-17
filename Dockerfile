@@ -7,10 +7,10 @@ COPY ops/bootstrap.sh /opt/7park/bootstrap.sh
 COPY ops/branch_to_env.sh /opt/7park/branch_to_env.sh
 COPY ops/print_parameters.py /opt/7park/print_parameters.py
 
-RUN apt update && apt install python3-pip -y && \
+RUN apt update && apt install python3-pip xserver-xorg-dev libxi-dev libxext-dev -y && \
     pip3 install boto3
 
-RUN yarn --ignore-engines
+RUN yarn
 
 ENTRYPOINT ["/bin/bash", "bootstrap.sh"]
 CMD ["webserver"]
