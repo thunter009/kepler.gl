@@ -19,8 +19,7 @@ eval $(python3 print_parameters.py --env="${ENV}" --app="${APP_NAME}")
 
 case "$1" in
 webserver)
-  echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
-  npm start
+  npm start:prod
   exit
   ;;
 *)
