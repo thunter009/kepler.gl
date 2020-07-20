@@ -16,9 +16,9 @@ aws_dockercfg_prod:
 terraform:
   build:
     dockerfile: ./ops/Dockerfile
+    args:
+      TF_VAR_CI_COMMIT_ID: "{{ .CommitID }}"
   volumes:
     - terraform/:/terraform
   encrypted_env_file:
     - aws.env.encrypted
-  environment:
-    - TF_VAR_CI_COMMIT_ID="${CI_COMMIT_ID}"
