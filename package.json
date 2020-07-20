@@ -30,7 +30,7 @@
     "cover": "nyc --reporter html --reporter cobertura --reporter json-summary npm test && nyc report",
     "coveralls": "nyc npm test && nyc report --reporter cobertura --reporter=text-lcov | coveralls",
     "start": "npm run install-and-start -- examples/demo-app start-local",
-    "start:prod": "npm run install-and-start -- examples/demo-app start-prod",
+    "start:prod": "npm run install-and-start -- examples/demo-app start-prod-silent",
     "start:deck": "npm run install-and-start -- examples/demo-app start-local-deck",
     "start:deck-src": "npm run install-and-start -- examples/demo-app start-local-deck-src",
     "start:loaders-src": "npm run install-and-start -- examples/demo-app start-local-loaders-src",
